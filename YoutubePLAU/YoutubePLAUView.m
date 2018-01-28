@@ -32,6 +32,12 @@
 - (void)drawRect:(NSRect)rect
 {
     [super drawRect:rect];
+    
+    [[NSColor whiteColor] setFill];
+    NSRectFill(self.bounds);
+    [[NSColor blackColor] set];
+    NSString *helloStr = @"hello screen saver plugin";
+    [helloStr drawAtPoint:NSMakePoint(100.0, 200.0) withAttributes:nil];
 }
 
 - (void)animateOneFrame
